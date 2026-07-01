@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+
 import NavbarSection from "./components/NavbarSection";
 import HeroSection from "./components/HeroSection";
 import ServicesSection from "./components/ServicesSection";
@@ -9,7 +10,6 @@ import WhyUsSection from "./components/WhyUsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import ArticlesSection from "./components/ArticlesSection";
 import FooterSection from "./components/FooterSection";
-
 function App() {
   return (
     <>
