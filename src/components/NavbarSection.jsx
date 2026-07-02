@@ -3,22 +3,29 @@ import { Link } from "react-router-dom";
 
 function NavbarSection() {
   return (
-    <Navbar bg="white" expand="lg" className="shadow-sm py-3">
+    <Navbar bg="white" expand="lg" sticky="top" className="shadow-sm py-3">
       <Container>
-        <Navbar.Brand as={Link} to="/" className="fw-bold fs-4 text-dark">
-          City Care Hospital
+        <Navbar.Brand as={Link} to="/" className="fw-bold fs-4">
+          🏥 City Care Hospital
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto gap-3">
-            <Nav.Link as={Link} to="/" className="fw-medium text-dark">Home</Nav.Link>
-            <Nav.Link as={Link} to="/services" className="fw-medium text-secondary">Services</Nav.Link>
-            <Nav.Link as={Link} to="/doctors" className="fw-medium text-secondary">Doctors</Nav.Link>
-            <Nav.Link as={Link} to="/contact" className="fw-medium text-secondary">Contact</Nav.Link>
+
+        <Navbar.Toggle aria-controls="navbar-nav" />
+
+        <Navbar.Collapse id="navbar-nav">
+          <Nav className="ms-auto align-items-center">
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/services">Services</Nav.Link>
+            <Nav.Link as={Link} to="/doctors">Doctors</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+
+            <Button
+              variant="primary"
+              href="#appointment"
+              className="ms-lg-3"
+            >
+              Book Appointment
+            </Button>
           </Nav>
-          <Button as={Link} to="/contact" variant="primary" className="fw-semibold px-4">
-            Book Appointment
-          </Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
