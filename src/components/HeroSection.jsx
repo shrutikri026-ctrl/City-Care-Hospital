@@ -1,7 +1,7 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import doctorImg from "../assets/doctor-hero.png";
 import { FaUserMd, FaHeartbeat, FaHospital, FaStar } from "react-icons/fa";
-function HeroSection() {
+function HeroSection({ onBookClick }) {
   return (
     <>
       {/* Hero */}
@@ -22,9 +22,9 @@ function HeroSection() {
               <p className="text-secondary fs-5 mb-4">
                 We provide trusted medical care with experienced doctors and modern facilities.
               </p>
-              <Button variant="primary" size="lg" className="px-5 py-3 fw-semibold">
-                Book Appointment →
-              </Button>
+              <Button variant="primary" size="lg" className="px-5 py-3 fw-semibold" onClick={onBookClick}>
+  Book Appointment →
+</Button>
             </Col>
             <Col lg={6} className="text-center py-5">
   <div style={{ position: "relative" }}>

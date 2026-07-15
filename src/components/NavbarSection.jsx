@@ -1,7 +1,7 @@
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function NavbarSection() {
+function NavbarSection( { onBookClick}){
   return (
     <Navbar bg="white" expand="lg" sticky="top" className="shadow-sm py-3">
       <Container>
@@ -19,11 +19,9 @@ function NavbarSection() {
             <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
 
             <Button
-              variant="primary"
-              href="#appointment"
-              className="ms-lg-3"
-            >
-              Book Appointment
+            variant="primary" className="fw-semibold px-4" onClick={onBookClick}>
+  
+           Book Appointment
             </Button>
           </Nav>
         </Navbar.Collapse>

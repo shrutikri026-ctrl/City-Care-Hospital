@@ -1,23 +1,27 @@
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-
 import NavbarSection from "./components/NavbarSection";
 import HeroSection from "./components/HeroSection";
 import ServicesSection from "./components/ServicesSection";
 import DoctorSection from "./components/DoctorSection";
-import ContactSection from "./components/ContactSection";
+import ContactSection from "./components/contactSection";
 import UpdatesSection from "./components/UpdatesSection";
 import WhyUsSection from "./components/WhyUsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import ArticlesSection from "./components/ArticlesSection";
 import FooterSection from "./components/FooterSection";
+import AppointmentModal from "./components/AppointmentModal";
+
 function App() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <>
-      <NavbarSection />
+      <NavbarSection onBookClick={() => setShowModal(true)} />
       <Routes>
         <Route path="/" element={
           <>
-            <HeroSection />
+            <HeroSection onBookClick={() => setShowModal(true)} />
             <UpdatesSection />
             <WhyUsSection />
             <ServicesSection />
@@ -30,6 +34,7 @@ function App() {
         <Route path="/contact" element={<ContactSection />} />
       </Routes>
       <FooterSection />
+      <AppointmentModal show={showModal} onHide={() => setShowModal(false)} />
     </>
   );
 }
