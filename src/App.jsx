@@ -5,7 +5,7 @@ import NavbarSection from "./components/NavbarSection";
 import HeroSection from "./components/HeroSection";
 import ServicesSection from "./components/ServicesSection";
 import DoctorSection from "./components/DoctorSection";
-import ContactSection from "./components/contactSection";
+import ContactSection from "./components/ContactSection";
 import UpdatesSection from "./components/UpdatesSection";
 import WhyUsSection from "./components/WhyUsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
