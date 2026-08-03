@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { FaCommentDots, FaTimes, FaArrowLeft } from "react-icons/fa";
 
-// Edit this to add/change questions & answers — no code logic needed below
+// Edit this to add/change questions & answers — no coding needed, just edit q/a text.
+// ⚠️ Replace placeholder answers (marked with 👉) with your hospital's real details.
 const MENU = [
   {
     q: "🏥 Our Services",
-    a: "We offer Cardiology, Orthopedics, Pediatrics, Neurology, Ophthalmology and Dentistry. Which one would you like to know more about?",
+    a: "We offer Cardiology, Orthopedics, Pediatrics, Neurology, Ophthalmology and Dentistry.",
   },
   {
     q: "🕒 Timings & Location",
@@ -22,6 +23,38 @@ const MENU = [
   {
     q: "👨‍⚕️ Our Doctors",
     a: "We have 10+ expert doctors across all specialities. Visit the 'Doctors' section on our site for full profiles.",
+  },
+  {
+    q: "💳 Consultation Fees",
+    a: "General consultations start at ₹500. Specialist consultations range from ₹700–₹1,200 depending on the department. Please call +91 98765 43210 for exact pricing.",
+  },
+  {
+    q: "🛡️ Health Insurance",
+    a: "We accept most major health insurance providers along with cashless treatment for select networks. Please bring your insurance card and ID at check-in so our front desk can verify coverage.",
+  },
+  {
+    q: "🚗 Parking Availability",
+    a: "Yes, free on-site parking is available for all patients and visitors, including dedicated space near the emergency entrance.",
+  },
+  {
+    q: "💻 Online Consultations",
+    a: "Yes, we offer video consultations for follow-ups and minor concerns. Use the 'Book Appointment' button and select 'Online Consultation' as the visit type.",
+  },
+  {
+    q: "📄 Lab Reports",
+    a: "Lab reports are usually ready within 24–48 hours. You can collect them at the front desk or request them by email — just share your patient ID when booking.",
+  },
+  {
+    q: "🔄 Reschedule / Cancel Appointment",
+    a: "To reschedule or cancel, please call us at +91 98765 43210 at least 2 hours before your appointment time.",
+  },
+  {
+    q: "🎉 Holiday Timings",
+    a: "We remain open on most public holidays with limited staff for regular consultations. Emergency care is available 24/7, all year round, including holidays.",
+  },
+  {
+    q: "🧾 First Visit — What to Bring",
+    a: "For your first visit, please bring a valid ID, any previous medical records, and your insurance card (if applicable).",
   },
 ];
 
@@ -71,7 +104,7 @@ export default function ChatbotWidget() {
           bottom: 96px;
           right: 24px;
           width: 320px;
-          max-height: 460px;
+          max-height: 480px;
           background: #fff;
           border-radius: 16px;
           box-shadow: 0 12px 40px rgba(0,0,0,0.18);
@@ -131,6 +164,8 @@ export default function ChatbotWidget() {
           display: flex;
           flex-direction: column;
           gap: 6px;
+          max-height: 220px;
+          overflow-y: auto;
         }
         .cc-option-btn {
           background: #eaf2ff;
@@ -200,4 +235,3 @@ export default function ChatbotWidget() {
     </>
   );
 }
-
