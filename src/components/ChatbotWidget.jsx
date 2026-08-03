@@ -200,4 +200,4 @@ export default function ChatbotWidget() {
     </>
   );
 }
-export default ChatbotWidget;
+
