@@ -1,4 +1,3 @@
-// City Care Hospital Website
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavbarSection from "./components/NavbarSection";
@@ -12,6 +11,7 @@ import TestimonialsSection from "./components/TestimonialsSection";
 import ArticlesSection from "./components/ArticlesSection";
 import FooterSection from "./components/FooterSection";
 import AppointmentModal from "./components/AppointmentModal";
+import ChatbotWidget from "./components/ChatbotWidget";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -36,6 +36,7 @@ function App() {
       </Routes>
       <FooterSection />
       <AppointmentModal show={showModal} onHide={() => setShowModal(false)} />
+      <ChatbotWidget />
     </>
   );
 }
