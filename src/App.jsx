@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavbarSection from "./components/NavbarSection";
 import HeroSection from "./components/HeroSection";
+import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
 import DoctorSection from "./components/DoctorSection";
 import ContactSection from "./components/ContactSection";
@@ -30,6 +31,7 @@ function App() {
             <ArticlesSection />
           </>
         } />
+        <Route path="/about" element={<AboutSection />} />
         <Route path="/services" element={<ServicesSection />} />
         <Route path="/doctors" element={<DoctorSection />} />
         <Route path="/contact" element={<ContactSection />} />
